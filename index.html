@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi TemanKRL</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1b1f1d; --muted: #5a635f; --line: #dfe5e2; --accent: #0b7a4b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121614; --fg: #e6ebe8; --muted: #a3ada8; --line: #2b322f; --accent: #5fd39b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 32px 0 8px; color: var(--accent); }
+  p, li { color: var(--fg); }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  code { font-size: 0.9em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kebijakan Privasi TemanKRL</h1>
+  <p class="meta">Berlaku sejak: <strong>17 November 2026</strong> · Versi aplikasi 1.2.0</p>
+
+  <p>TemanKRL ("aplikasi") adalah aplikasi Android pendamping perjalanan KRL yang memberi pengingat saat mendekati stasiun tujuan. Kebijakan ini menjelaskan data apa yang dipakai aplikasi, untuk apa, dan bagaimana kamu mengendalikannya.</p>
+
+  <h2>Ringkasnya</h2>
+  <ul>
+    <li><strong>Semua data disimpan hanya di HP kamu.</strong> TemanKRL tidak memiliki server, dan aplikasi bahkan tidak memiliki izin akses internet, sehingga data tidak dapat dikirim ke mana pun.</li>
+    <li>Tanpa akun dan tanpa login. Kami tidak meminta nama, email, atau nomor telepon.</li>
+    <li>Tanpa iklan, analitik, atau pelacakan pihak ketiga.</li>
+    <li>Kami tidak mengumpulkan, menjual, atau membagikan data pribadi kamu kepada siapa pun.</li>
+  </ul>
+
+  <h2>Data yang disimpan di perangkat</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Data</th><th>Kegunaan</th></tr>
+    <tr><td>ID acak instalasi (tanpa identitas pribadi)</td><td>Membedakan data lokal di perangkat</td></tr>
+    <tr><td>Pengaturan: tema, notifikasi, suara, getar, jarak pengingat, Extreme Alert, rekomendasi perjalanan, suara game</td><td>Menyimpan pilihan kamu</td></tr>
+    <tr><td>Riwayat perjalanan: stasiun asal dan tujuan, waktu mulai dan tiba, durasi, stasiun yang terdeteksi beserta waktunya</td><td>Riwayat, statistik, dan progres perjalanan</td></tr>
+    <tr><td>Pola perjalanan rutin, dihitung dari riwayat</td><td>Rekomendasi Smart Commute di Beranda</td></tr>
+    <tr><td>Skor game TemanMain</td><td>Menampilkan skor terbaik</td></tr>
+  </table>
+  </div>
+  <p><strong>Yang tidak disimpan:</strong> posisi GPS mentah, nama, email, nomor telepon, kontak, SMS, foto, atau file lain di perangkat.</p>
+
+  <h2>Lokasi</h2>
+  <ul>
+    <li>Izin lokasi (tepat dan perkiraan) diminta saat kamu menekan <em>Aktifkan Reminder</em>, setelah penjelasan. Izin tidak diminta saat aplikasi dibuka.</li>
+    <li>Lokasi dipakai <strong>hanya selama ada perjalanan aktif yang kamu mulai</strong>, termasuk saat layar mati. Selama itu tampil notifikasi tetap "TemanKRL memantau perjalanan".</li>
+    <li>Posisi diproses langsung di perangkat untuk mendeteksi stasiun. Yang disimpan hanya nama stasiun yang terdeteksi dan waktunya, bukan koordinat GPS.</li>
+    <li>Pemantauan berhenti saat perjalanan selesai atau dibatalkan. Bila Extreme Alert sedang berbunyi, pemantauan baru berhenti setelah alarm dihentikan.</li>
+    <li>TemanKRL tidak meminta izin lokasi di latar belakang (<code>ACCESS_BACKGROUND_LOCATION</code>).</li>
+  </ul>
+
+  <h2>Izin Android yang digunakan</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Izin</th><th>Alasan</th></tr>
+    <tr><td>Lokasi (tepat dan perkiraan)</td><td>Mendeteksi stasiun selama perjalanan aktif</td></tr>
+    <tr><td>Foreground service (lokasi)</td><td>Tetap memantau perjalanan saat layar mati</td></tr>
+    <tr><td>Notifikasi</td><td>Menampilkan pengingat stasiun dan Extreme Alert</td></tr>
+    <tr><td>Getar</td><td>Getar pengingat dan alarm (bisa dimatikan)</td></tr>
+    <tr><td>Wake lock</td><td>Menjaga pemantauan dan alarm tetap berjalan saat layar mati</td></tr>
+  </table>
+  </div>
+  <p>Kamu dapat mencabut izin kapan saja di pengaturan Android. Aplikasi tetap dapat dipakai. Tanpa izin lokasi, pengingat otomatis tidak bekerja, tetapi tombol "Saya sudah tiba" tetap tersedia.</p>
+
+  <h2>Menghapus data</h2>
+  <ul>
+    <li>Hapus satu perjalanan dari halaman detailnya, atau semua riwayat di <em>Pengaturan → Hapus semua riwayat</em>. Data yang dihapus hilang permanen.</li>
+    <li>Matikan rekomendasi perjalanan di <em>Pengaturan → Smart Commute</em>.</li>
+    <li>Menghapus (uninstall) aplikasi menghapus seluruh data TemanKRL di perangkat.</li>
+  </ul>
+  <p>Karena kami tidak menyimpan data di server, tidak ada data kamu yang perlu dihapus di pihak kami.</p>
+
+  <h2>Anak-anak</h2>
+  <p>TemanKRL tidak ditujukan untuk anak di bawah 13 tahun dan tidak dengan sengaja mengumpulkan data dari anak-anak.</p>
+
+  <h2>Sumber data stasiun</h2>
+  <p>Data stasiun berasal dari Commute Data Platform (Shiori Labs) dan kontributor OpenStreetMap, di bawah Open Database License (ODbL) 1.0. Data ini dibundel di dalam aplikasi dan tidak diunduh saat aplikasi berjalan.</p>
+
+  <h2>Bukan aplikasi resmi</h2>
+  <p>TemanKRL adalah aplikasi independen dan tidak berafiliasi dengan PT Kereta Commuter Indonesia (KAI Commuter) atau PT Kereta Api Indonesia (Persero).</p>
+
+  <h2>Perubahan kebijakan</h2>
+  <p>Bila cara aplikasi memakai data berubah, kebijakan ini akan diperbarui dan tanggal berlakunya diubah. Perubahan penting juga akan dijelaskan di catatan rilis aplikasi.</p>
+
+  <h2>Kontak</h2>
+  <p>Pertanyaan tentang privasi: <a href="mailto:lordramdhan@gmail.com">lordramdhan@gmail.com</a></p>
+</main>
+</body>
+</html>
